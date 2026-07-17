@@ -6,7 +6,6 @@
     <title>Proanfun | About</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-
     <style>
         :root {
             --bg-color: #0A0A0C;
@@ -211,47 +210,165 @@
           margin-top: 50px;
           margin-bottom: 50px;
         }
+
+        /* --- Tab Navigation Styling (Modified for Scrolling) --- */
+        .tab-navigation-wrapper {
+            position: relative;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .tab-navigation {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding-bottom: 10px;
+            margin-bottom: -1px;
+            scrollbar-width: thin; /* Firefox */
+            scrollbar-color: var(--accent-color) transparent; /* Firefox */
+        }
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .tab-navigation::-webkit-scrollbar {
+            display: none;
+        }
+
+        .tab-button { 
+            background: transparent; 
+            border: none; 
+            color: var(--text-muted); 
+            padding: 12px 24px; 
+            font-family: 'Montserrat', sans-serif; 
+            font-size: 0.9rem; 
+            font-weight: 500; 
+            cursor: pointer; 
+            transition: all 0.3s ease; 
+            border-bottom: 2px solid transparent;
+            flex-shrink: 0; /* Prevents buttons from squishing on small screens */
+        } 
+
+        .tab-button:hover { color: var(--accent-pale); }
+        .tab-button.active { color: var(--accent-color); border-bottom: 2px solid var(--accent-color); }
+
+        /* --- Tab Content Styling --- */
+        .tab-pane { 
+            display: none; 
+            background-color: var(--card-bg); 
+            border: 1px solid var(--border-color); 
+            border-radius: var(--border-radius); 
+            padding: 30px; 
+            color: #ffffff; 
+        }
+        .tab-pane.active { display: block; }
     </style>
 </head>
 <body>
-  
-    <body>
-  <div class="container">
+
+    <div class="container">
         <header>
             <span class="eyebrow">Antonio</span>
-            <h1>About Me</h1>
+            <h1>Subjects</h1>
             <span class="eyebrow">School</span>
         </header>
 
-
-        <main>
-        <section>
-          <h1>How ive coded it</h1>
-          <p class="paragraph">i have <code>coded this website</code> in school by</p>
-          <p class="paragraph">coding this in any lesson i can (if it is a room change</p>
-          <p class="paragraph">or if its in ict or an ict club)</p>
-
-        <hr/>
-
-
-        </section>
-
-        <section>
-            <h1>Why ive chose to code it</h1>
-            <p class="paragraph">I have chose to code this website because I feel like</p>
-            <p class="paragraph">I need a chalange in school, even though this is harder</p>
-            <p class="paragraph">than ict school work i still feel this is too easy.</p>
-        </section>
-
-        <section>
-            <div class="nav-buttons">
-                <a href="index.html" class="btn">Return to Homepage 🏠</a>
+        <!-- Tab Buttons Navigation -->
+        <div class="tab-navigation-wrapper">
+            <div class="tab-navigation">
+                <button class="tab-button active" onclick="switchTab(event, 'tab1')">Mathmatics</button>
+                <button class="tab-button" onclick="switchTab(event, 'tab2')">English</button>
+                <button class="tab-button" onclick="switchTab(event, 'tab3')">Chemistry</button>
+                <button class="tab-button" onclick="switchTab(event, 'tab4')">Physics</button>
+                <button class="tab-button" onclick="switchTab(event, 'tab5')">Biology</button>
+                <button class="tab-button" onclick="switchTab(event, 'tab6')">History</button>
+                <button class="tab-button" onclick="switchTab(event, 'tab7')">Geography</button>
+                <button class="tab-button" onclick="switchTab(event, 'tab8')">Religious Education</button>
+                <button class="tab-button" onclick="switchTab(event, 'tab9')">French</button>
+                <button class="tab-button" onclick="switchTab(event, 'tab10')">Art & Designs</button>
+                <button class="tab-button" onclick="switchTab(event, 'tab11')">Music</button>
+                <button class="tab-button" onclick="switchTab(event, 'tab12')">Drama</button>
+                <button class="tab-button" onclick="switchTab(event, 'tab13')">Technology & IT</button>
+                <button class="tab-button" onclick="switchTab(event, 'tab14')">Physical Education</button>
+                <button class="tab-button" onclick="switchTab(event, 'tab15')">PSHE</button>
             </div>
-        </section>
-        </main>
+        </div>
 
+        <!-- Tab Content Panes -->
+        <div class="tab-content">
+            <div id="tab1" class="tab-pane active">
+                
+                <section>
+                <h1>Mathmatics</h1>
+                <p class="paragraph">Math (short for Mathmatics) is an <code>Essential</code> Subject</p>
+                <p class="paragraph">You need it for most subjects.</p>
+                </section>
 
-    
+                <section>
+                    <h1>What is is?</h1>
+                    <p class="paragraph">Math is</p>
+                </section>
 
+            </div>
+            <div id="tab2" class="tab-pane">
+                <p>Put the information for your second tab here.</p>
+            </div>
+            <div id="tab3" class="tab-pane">
+                <p>Put the information for your third tab here.</p>
+            </div>
+            <div id="tab4" class="tab-pane">
+                <p>fdfeef</p>
+            </div>
+            <div id="tab5" class="tab-pane">
+                <p>efef</p>
+            </div>
+            <div id="tab6" class="tab-pane">
+                <p>efef</p>
+            </div>
+            <div id="tab7" class="tab-pane">
+                <p>efef</p>
+            </div>
+            <div id="tab8" class="tab-pane">
+                <p>efef</p>
+            </div>
+            <div id="tab9" class="tab-pane">
+                <p>efef</p>
+            </div>
+            <div id="tab10" class="tab-pane">
+                <p>efef</p>
+            </div>
+            <div id="tab11" class="tab-pane">
+                <p>efef</p>
+            </div>
+            <div id="tab12" class="tab-pane">
+                <p>efef</p>
+            </div>
+            <div id="tab13" class="tab-pane">
+                <p>efef</p>
+            </div>
+            <div id="tab14" class="tab-pane">
+                <p>efef</p>
+            </div>
+            <div id="tab15" class="tab-pane">
+                <p>efef</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript to Handle Tab Switching -->
+    <script>
+        function switchTab(event, tabId) {
+            // Hide all tab content panes
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            tabPanes.forEach(pane => pane.classList.remove('active'));
+
+            // Remove active status from all tab buttons
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => button.classList.remove('active'));
+
+            // Show current tab content and mark button active
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
 </body>
 </html>
